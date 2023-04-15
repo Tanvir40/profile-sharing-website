@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
+
+Route::get('/', [FrontendController::class, 'index'])->name('index');
+Route::get('/profile', [FrontendController::class, 'profile'])->name('profile');
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
