@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use Auth;
 
 class FrontendController extends Controller
 {
@@ -11,6 +13,9 @@ class FrontendController extends Controller
     }
 
     public function profile(){
-        return view('frontend.profile');
+        $user = User::where('id', Auth::id())->first();
+        return view('frontend.profile',[
+            'user'=>$user,
+        ]);
     }
 }
