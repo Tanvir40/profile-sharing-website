@@ -111,4 +111,11 @@ class BackendController extends Controller
             return back();
         }
     }
+
+    function profile_update(Request $request){
+        User::where('id', $request->id)->update([
+            'profile_url'=>$request->profile_url,
+        ]);
+        return back();
+    }
 }

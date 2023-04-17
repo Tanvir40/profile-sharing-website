@@ -15,7 +15,7 @@
     <div class="row">
         <div class="col-12">
             <div class="image text-center mt-5 z-index-1">
-                <embed style="border: 4px solid white;width:120px;border-radius: 50%;" src="{{asset('frontend/img/saby.jpg')}}" type="image/png">
+                <embed style="border: 4px solid white;width:120px;border-radius: 50%;" src="@if($user->profile_photo != null){{asset('profile')}}/{{$user->profile_photo}}@else {{asset('profile/default.jpg')}}  @endif" type="image/png">
             </div>
 
             <div class="box1 d-flex align-items-center justify-content-center" style="margin-top:-50px;">
@@ -31,7 +31,7 @@
                 @if($user->photo_one != null)
                 <div class="col-md-6">
                     <div class="box-img1">
-                        <img class="bi" style="border-radious:10px;border: 4px solid white;width:270px;" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="">
+                        <img class="bi" style="border-radious:10px;border: 4px solid white;width:270px;" src="@if($user->photo_one != null){{asset('photo')}}/{{$user->photo_one}}@else {{asset('profile/default.jpg')}}  @endif" alt="">
                     </div>
                 </div>
                 @else
@@ -41,7 +41,7 @@
                 @if($user->photo_two != null)
                 <div class="col-md-6">
                     <div class="box-img1">
-                        <img class="bi" style="border-radious:10px;border: 4px solid white;width:270px;" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="">
+                        <img class="bi" style="border-radious:10px;border: 4px solid white;width:270px;" src="@if($user->photo_two != null){{asset('photo')}}/{{$user->photo_two}}@else {{asset('profile/default.jpg')}}  @endif" alt="">
                     </div>
                 </div>
                 @else
@@ -56,7 +56,7 @@
             @if($user->video_one != null)
                 <div class="col-6">
                     <div class="box-img1">
-                        <iframe class="video" style="border-radius: 10px;" width="265" height="140" src="https://www.youtube.com/embed/OqtR1ZlEHwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="video" style="border-radius: 10px;" width="265" height="140" src="{{$user->video_two}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
                 @else
@@ -66,7 +66,7 @@
             @if($user->video_two != null)
                 <div class="col-6">
                     <div class="box-img1">
-                        <iframe class="video" style="border-radius: 10px;" width="265" height="140" src="https://www.youtube.com/embed/OqtR1ZlEHwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="video" style="border-radius: 10px;" width="265" height="140" src="{{$user->video_two}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
                 @else

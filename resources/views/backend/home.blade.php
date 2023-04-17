@@ -243,14 +243,14 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <form action="{{route('profile')}}" method="post">
+      <form action="{{route('profile_update')}}" method="post">
           @csrf
         <input type="hidden" value="{{Auth::id()}}" name="id">
       <label for="" class="form-label">Profile Url</label>
-      <input type="link" name="profile_url" class="form-control" placeholder="Enter Your Profile Url">
+      <input type="text" name="profile_url" class="form-control" placeholder="Enter Your Profile Url">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
       </div>
       </form>
     </div>

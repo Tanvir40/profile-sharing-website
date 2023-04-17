@@ -23,7 +23,7 @@ use App\Http\Controllers\BackendController;
 Auth::routes();
 
 Route::get('/', [FrontendController::class, 'index'])->name('index');
-Route::get('/profile', [FrontendController::class, 'profile'])->name('profile');
+Route::get('/profiles', [FrontendController::class, 'profile'])->name('profile');
 
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
