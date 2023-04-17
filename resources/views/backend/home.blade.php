@@ -1,5 +1,9 @@
 @include('../frontend/inc/header')
 
+
+
+
+
 <div class="container">
     <div class="row">
         <div class="col-12">
@@ -10,7 +14,7 @@
             <div class=" d-flex align-items-center justify-content-center m" style="margin-top:120px;">
                 
                 <div class="box text-center text-white px-5 pb-3" style="width: 35rem;padding-top:4rem;background-color:#003B86;border-radius: 10px;">
-                    <img class="z-index:1;" style="border: 4px solid white;width:120px;border-radius: 50%; margin-top: -200px;" src="{{asset('frontend/img/saby.jpg')}}" alt="">
+                    <img class="z-index:1;" style="border: 4px solid white;width:120px;border-radius: 50%; margin-top: -200px;" src="@if($user->profile_photo != null){{asset('profile')}}/{{$user->profile_photo}}@else {{asset('profile/default.jpg')}}  @endif" alt="">
                     <div class="d-flex align-items-center justify-content-center">
                         <h4>{{"@"}}{{Auth::user()->name}} &nbsp;</h4>
                         <a data-bs-toggle="modal" data-bs-target="#ProfileModal">
@@ -81,6 +85,7 @@
 
 {{--modal start--}}
 
+
 <!-- profile name modal -->
 <div class="modal fade" id="ProfileModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -90,15 +95,21 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <form action="{{route('name_update')}}" method="post" enctype="multipart/form-data">
+          @csrf
+        <input type="hidden" value="{{Auth::id()}}" name="id">
         <label for="" class="form-label">Name</label>
-        <input type="text" class="form-control mb-2" placeholder="Enter Your Name">
+        <input type="text" name="name" class="form-control mb-2" placeholder="Enter Your Name">
 
         <label for="" class="form-label">Profile Photo</label>
-        <input type="file" class="form-control " >
+        <input type="file" name="profile_photo" class="form-control mb-2" placeholder="Enter Your Name">
+
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
       </div>
+    </form>
     </div>
   </div>
 </div>
@@ -112,12 +123,16 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <label for="" class="form-label">Description</label>
-        <textarea name="desp" id="" cols="30" rows="10" class="form-control">Enter Description</textarea>
+      <form action="{{route('desp_update')}}" method="post" >
+          @csrf
+        <input type="hidden" value="{{Auth::id()}}" name="id">
+        <label for="" class="form-label">Description</label>
+        <textarea name="profile_desp" id="" cols="30" rows="10" class="form-control">Enter Description</textarea>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
       </div>
+    </form>
     </div>
   </div>
 </div>
@@ -131,14 +146,19 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+      <form action="{{route('photo_update')}}" method="post" enctype="multipart/form-data">
+          @csrf
+        <input type="hidden" value="{{Auth::id()}}" name="id">
       <label for="" class="form-label">Photo 1</label>
-        <input type="file" class="form-control mb-2" placeholder="Enter Your Photo">
+        <input type="file" name="photo_one" class="form-control mb-2" placeholder="Enter Your Photo">
+
         <label for="" class="form-label">Photo 2</label>
-        <input type="file" class="form-control" placeholder="Enter Your Photo">
+        <input type="file" name="photo_two" class="form-control" placeholder="Enter Your Photo">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
       </div>
+    </form>
     </div>
   </div>
 </div>
@@ -152,14 +172,18 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+      <form action="{{route('video_update')}}" method="post">
+          @csrf
+        <input type="hidden" value="{{Auth::id()}}" name="id">
       <label for="" class="form-label">Video 1</label>
-        <input type="link" class="form-control mb-2" placeholder="Enter Your video Link">
+        <input type="link" name="video_one" class="form-control mb-2" placeholder="Enter Your video Link">
         <label for="" class="form-label">Video 2</label>
-        <input type="link" class="form-control" placeholder="Enter Your video Link">
+        <input type="link" name="video_two" class="form-control" placeholder="Enter Your video Link">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
       </div>
+    </form>
     </div>
   </div>
 </div>
@@ -219,12 +243,16 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+      <form action="{{route('profile')}}" method="post">
+          @csrf
+        <input type="hidden" value="{{Auth::id()}}" name="id">
       <label for="" class="form-label">Profile Url</label>
-      <input type="link" class="form-control" placeholder="Enter Your Profile Url">
+      <input type="link" name="profile_url" class="form-control" placeholder="Enter Your Profile Url">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary">Save changes</button>
       </div>
+      </form>
     </div>
   </div>
 </div>
