@@ -23,7 +23,7 @@ use App\Http\Controllers\BackendController;
 Auth::routes();
 
 Route::get('/', [FrontendController::class, 'index'])->name('index');
-Route::get('/profiles', [FrontendController::class, 'profile'])->name('profile');
+Route::get('/profiles', [FrontendController::class, 'profile'])->name('profile')->middleware('auth');
 
 Route::get('/profiles={slug}', [FrontendController::class, 'profile_details'])->name('profile_details');
 
