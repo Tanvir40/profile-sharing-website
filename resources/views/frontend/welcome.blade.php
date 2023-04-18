@@ -50,7 +50,7 @@
                     
                     </div>
                     <div class="d-flex">
-                    <p>{{$userone->profile_desp}}</p>
+                    <p>{{substr($userone->profile_desp, 0, 100)}}</p>
                 </div>
                 <div class="row m-0 p-0">
                     
@@ -105,7 +105,7 @@
                             <div class="card-body">
                                 <img class="z-index:1;" style="border: 4px solid white;width:70px;border-radius: 50%; margin-top: -70px;" src="@if($user->profile_photo != null){{asset('profile')}}/{{$user->profile_photo}}@else {{asset('profile/default.jpg')}}  @endif" alt="">
                                 <h6 class="text-white bold">{{'@'}}{{$user->name}}</h6>
-                                <p class="text-white fw-light" style="font-size:0.8rem;">{{$user->profile_desp}}</p>
+                                <p class="text-white fw-light" style="font-size:0.8rem;">{{substr($user->profile_desp, 0, 110)}}</p>
 
                                 <div class="row m-0 p-0">
                     

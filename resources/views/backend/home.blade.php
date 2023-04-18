@@ -102,6 +102,7 @@
         <input type="text" name="name" class="form-control mb-2" placeholder="Enter Your Name">
 
         <label for="" class="form-label">Profile Photo</label>
+        <small class="text-warning">Image Height Width Size should be Equal</small>
         <input type="file" name="profile_photo" class="form-control mb-2" placeholder="Enter Your Name">
 
       </div>
