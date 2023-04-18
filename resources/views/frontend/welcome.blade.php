@@ -46,7 +46,7 @@
                 <div class="box text-center text-white px-5 pb-3" style="width: 35rem;padding-top:4rem;background-color:#003B86;border-radius: 10px;">
                 <a href="{{route('profile_details',$userone->id)}}"><img class="z-index:1;" style="border: 4px solid white;width:120px;border-radius: 50%; margin-top: -200px;" src="@if($userone->profile_photo != null){{asset('profile')}}/{{$userone->profile_photo}}@else {{asset('profile/default.jpg')}}  @endif" alt=""></a>
                     <div class="d-flex align-items-center justify-content-center">
-                        <a href="{{route('profile_details',$userone->id)}}"><h4>{{'@'}}{{$userone->name}} &nbsp;</h4></a>
+                        <a href="{{route('profile_details',$userone->id)}}"><h4 class="text-white">{{'@'}}{{$userone->name}} &nbsp;</h4></a>
                     
                     </div>
                     <div class="d-flex">
