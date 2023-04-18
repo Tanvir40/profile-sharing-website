@@ -25,6 +25,8 @@ Auth::routes();
 Route::get('/', [FrontendController::class, 'index'])->name('index');
 Route::get('/profiles', [FrontendController::class, 'profile'])->name('profile');
 
+Route::get('/profiles={slug}', [FrontendController::class, 'profile_details'])->name('profile_details');
+
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::post('/name-update', [BackendController::class, 'name_update'])->name('name_update');

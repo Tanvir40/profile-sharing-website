@@ -20,7 +20,7 @@
 
             <div class="box1 d-flex align-items-center justify-content-center" style="margin-top:-50px;">
                 <div class="box text-center text-white px-5 pb-5" style="width: 35rem;padding-top:4rem;background-color:#003B86;z-index:-1;border-radius: 10px;">
-                    <h4>{{"@"}}{{Auth::user()->name}}</h4>
+                    <h4>{{"@"}}{{$user->name}}</h4>
                     <p>{{substr($user->profile_desp, 0, 200)}}</p>
                 </div>
             </div>

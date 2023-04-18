@@ -23,4 +23,11 @@ class FrontendController extends Controller
             'user'=>$user,
         ]);
     }
+    
+    public function profile_details($slug){
+        $user = User::where('id', $slug)->first();
+        return view('frontend.profile',[
+            'user'=>$user,
+        ]);
+    }
 }
