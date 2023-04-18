@@ -9,7 +9,12 @@ use Auth;
 class FrontendController extends Controller
 {
     public function index(){
-        return view('frontend.welcome');
+        $users = User::all();
+        $userone = User::first();
+        return view('frontend.welcome',[
+            'users'=>$users,
+            'userone'=>$userone,
+        ]);
     }
 
     public function profile(){

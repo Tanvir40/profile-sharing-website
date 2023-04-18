@@ -176,9 +176,9 @@
           @csrf
         <input type="hidden" value="{{Auth::id()}}" name="id">
       <label for="" class="form-label">Video 1</label>
-        <input type="link" name="video_one" class="form-control mb-2" placeholder="Enter Your video Link">
+        <input type="link" name="video_one" class="form-control mb-2" placeholder="Enter Your video Embed Link">
         <label for="" class="form-label">Video 2</label>
-        <input type="link" name="video_two" class="form-control" placeholder="Enter Your video Link">
+        <input type="link" name="video_two" class="form-control" placeholder="Enter Your video Embed Link">
       </div>
       <div class="modal-footer">
         <button type="submit" class="btn btn-primary">Save changes</button>

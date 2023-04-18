@@ -44,26 +44,30 @@
 
             <div class="col-md-6">
                 <div class="box text-center text-white px-5 pb-3" style="width: 35rem;padding-top:4rem;background-color:#003B86;border-radius: 10px;">
-                    <img class="z-index:1;" style="border: 4px solid white;width:120px;border-radius: 50%; margin-top: -200px;" src="{{asset('frontend/img/saby.jpg')}}" alt="">
+                    <img class="z-index:1;" style="border: 4px solid white;width:120px;border-radius: 50%; margin-top: -200px;" src="@if($userone->profile_photo != null){{asset('profile')}}/{{$userone->profile_photo}}@else {{asset('profile/default.jpg')}}  @endif" alt="">
                     <div class="d-flex align-items-center justify-content-center">
-                        <h4>@SabbirAhmedSaby &nbsp;</h4>
+                        <h4>{{'@'}}{{$userone->name}} &nbsp;</h4>
                     
                     </div>
                     <div class="d-flex">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo tempore omnis dolore, harum mollitia quisquam sapiente libero laudantium</p>
+                    <p>{{$userone->profile_desp}}</p>
                 </div>
                 <div class="row m-0 p-0">
                     
                     <div class="col-4">
-                        <img class="footers z-index:1;"height="100" style="border: 4px solid white;width:100px;" src="{{asset('frontend/img/saby.jpg')}}" alt="">
+                        <img class="footers z-index:1;"height="100" style="border: 4px solid white;width:100px;" src="@if($userone->photo_one != null){{asset('photo')}}/{{$userone->photo_one}}@else {{asset('profile/default.jpg')}}  @endif" alt="">
                     </div>
 
-                    <div class="col-4">
-                        <iframe class="videos" style="border-radius: 10px;" width="100" height="100" src="https://www.youtube.com/embed/OqtR1ZlEHwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
+                    @if($userone->video_one != null)
+                        <div class="col-4">
+                            <iframe class="videos" style="border-radius: 10px;" width="100" height="100" src="{{$userone->video_one}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    @else
+
+                    @endif
 
                     <div class="col-4">
-                        <img  height="100" class="footers z-index:1;" style="border: 4px solid white;width:100px;" src="{{asset('frontend/img/saby.jpg')}}" alt="">
+                        <img  height="100" class="footers z-index:1;" style="border: 4px solid white;width:100px;" src="@if($userone->photo_two != null){{asset('photo')}}/{{$userone->photo_two}}@else {{asset('profile/default.jpg')}}  @endif" alt="">
                     </div>
 
                 </div>  
@@ -94,25 +98,31 @@
 
                <div class="row">
 
+                @foreach($users as $user)
+
                     <div class="col-md-6 col-sm-12 mb-5">
                         <div class="card mb-6" style="background-color: #003B86;">
                             <div class="card-body">
-                                <img class="z-index:1;" style="border: 4px solid white;width:70px;border-radius: 50%; margin-top: -70px;" src="{{asset('frontend/img/saby.jpg')}}" alt="">
-                                <h6 class="text-white bold">@tanvir Hasan Tonmoy</h6>
-                                <p class="text-white fw-light" style="font-size:0.8rem;">Lorem ipsum dolor sit amet consectetur</p>
+                                <img class="z-index:1;" style="border: 4px solid white;width:70px;border-radius: 50%; margin-top: -70px;" src="@if($user->profile_photo != null){{asset('profile')}}/{{$user->profile_photo}}@else {{asset('profile/default.jpg')}}  @endif" alt="">
+                                <h6 class="text-white bold">{{'@'}}{{$user->name}}</h6>
+                                <p class="text-white fw-light" style="font-size:0.8rem;">{{$user->profile_desp}}</p>
 
                                 <div class="row m-0 p-0">
                     
                                     <div class="col-4">
-                                        <img class="footer z-index:1;"height="50" style="border: 4px solid white;width:50px;" src="{{asset('frontend/img/saby.jpg')}}" alt="">
+                                        <img class="footer z-index:1;"height="50" style="border: 4px solid white;width:50px;" src="@if($user->photo_one != null){{asset('photo')}}/{{$user->photo_one}}@else {{asset('profile/default.jpg')}}  @endif" alt="">
                                     </div>
                 
-                                    <div class="col-4">
-                                        <iframe class="video" style="border-radius: 10px;" width="70" height="50" src="https://www.youtube.com/embed/OqtR1ZlEHwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                    </div>
+                                    @if($user->video_one != null)
+                                        <div class="col-4">
+                                            <iframe class="video" style="border-radius: 10px;" width="70" height="50" src="{{$user->video_one}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        </div>
+                                    @else
+
+                                    @endif
                 
                                     <div class="col-4">
-                                        <img  height="50" class="footer z-index:1;" style="border: 4px solid white;width:50px;" src="{{asset('frontend/img/saby.jpg')}}" alt="">
+                                        <img  height="50" class="footer z-index:1;" style="border: 4px solid white;width:50px;" src="@if($user->photo_two != null){{asset('photo')}}/{{$user->photo_two}}@else {{asset('profile/default.jpg')}}  @endif" alt="">
                                     </div>
                 
                                 </div>
@@ -120,59 +130,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-sm-12 mb-5">
-                        <div class="card mb-6" style="background-color: #003B86;">
-                            <div class="card-body">
-                                <img class="z-index:1;" style="border: 4px solid white;width:70px;border-radius: 50%; margin-top: -70px;" src="{{asset('frontend/img/saby.jpg')}}" alt="">
-                                <h6 class="text-white bold">@tanvir Hasan Tonmoy</h6>
-                                <p class="text-white fw-light" style="font-size:0.8rem;">Lorem ipsum dolor sit amet consectetur</p>
-
-                                <div class="row m-0 p-0">
-                    
-                                    <div class="col-4">
-                                        <img class="footer z-index:1;"height="50" style="border: 4px solid white;width:50px;" src="{{asset('frontend/img/saby.jpg')}}" alt="">
-                                    </div>
-                
-                                    <div class="col-4">
-                                        <iframe class="video" style="border-radius: 10px;" width="70" height="50" src="https://www.youtube.com/embed/OqtR1ZlEHwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                    </div>
-                
-                                    <div class="col-4">
-                                        <img  height="50" class="footer z-index:1;" style="border: 4px solid white;width:50px;" src="{{asset('frontend/img/saby.jpg')}}" alt="">
-                                    </div>
-                
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-12 mb-5">
-                        <div class="card mb-6" style="background-color: #003B86;">
-                            <div class="card-body">
-                                <img class="z-index:1;" style="border: 4px solid white;width:70px;border-radius: 50%; margin-top: -70px;" src="{{asset('frontend/img/saby.jpg')}}" alt="">
-                                <h6 class="text-white bold">@tanvir Hasan Tonmoy</h6>
-                                <p class="text-white fw-light" style="font-size:0.8rem;">Lorem ipsum dolor sit amet consectetur</p>
-
-                                <div class="row m-0 p-0">
-                    
-                                    <div class="col-4">
-                                        <img class="footer z-index:1;"height="50" style="border: 4px solid white;width:50px;" src="{{asset('frontend/img/saby.jpg')}}" alt="">
-                                    </div>
-                
-                                    <div class="col-4">
-                                        <iframe class="video" style="border-radius: 10px;" width="70" height="50" src="https://www.youtube.com/embed/OqtR1ZlEHwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                    </div>
-                
-                                    <div class="col-4">
-                                        <img  height="50" class="footer z-index:1;" style="border: 4px solid white;width:50px;" src="{{asset('frontend/img/saby.jpg')}}" alt="">
-                                    </div>
-                
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                   
+                @endforeach      
                     
                 </div>
 

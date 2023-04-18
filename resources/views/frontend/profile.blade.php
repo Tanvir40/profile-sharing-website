@@ -56,7 +56,9 @@
             @if($user->video_one != null)
                 <div class="col-6">
                     <div class="box-img1">
-                        <iframe class="video" style="border-radius: 10px;" width="265" height="140" src="{{$user->video_two}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <!-- <iframe class="video" style="border-radius: 10px;" width="265" height="140" src="https://youtu.be/{{$user->video_two}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+
+                            <iframe class="video" style="border-radius: 10px;" width="265" height="140" src="{{$user->video_one}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
                 @else
@@ -66,7 +68,7 @@
             @if($user->video_two != null)
                 <div class="col-6">
                     <div class="box-img1">
-                        <iframe class="video" style="border-radius: 10px;" width="265" height="140" src="{{$user->video_two}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="video" style="border-radius: 10px;" width="265" height="140" src="{{$user->video_two}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
                 @else
