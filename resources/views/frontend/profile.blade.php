@@ -4,10 +4,58 @@
             
             .video{
                 width: 180px !important; 
-                height: 110px !important;
+                height: 120px !important;
+            }
+            .box{
+                    width: 20rem !important; 
+                }
+           
+            
+        } 
+
+        @media only screen and (min-width: 481px) {
+            
+            .video{
+                width: 265px !important; 
+                height: 130px !important;
+            }       
+            
+        } 
+       
+
+        @media only screen and (min-width: 1399px) {
+                .box{
+                    width: 35rem !important; 
+                } 
+
+        }
+
+        @media only screen and (min-width: 900px) {
+            
+            .video{
+                width: 260px !important; 
+                height: 120px !important;
+            }
+            .box{
+                width: 35rem !important; 
             }
             
-        }
+        } 
+
+        @media only screen and (min-width: 772px) {
+            
+            .bi{
+                width: 265px !important; 
+            }
+            .video{
+                width: 260px !important; 
+                height: 120px !important;
+            }
+            .box{
+                    width: 35rem !important; 
+                }
+            
+        } 
         
     </style>
 
@@ -19,7 +67,7 @@
             </div>
 
             <div class="box1 d-flex align-items-center justify-content-center" style="margin-top:-50px;">
-                <div class="box text-center text-white px-5 pb-5" style="width: 35rem;padding-top:4rem;background-color:#003B86;z-index:-1;border-radius: 10px;">
+                <div class="box text-center text-white px-5 pb-5" style="width:35rem !important;padding-top:4rem;background-color:#003B86;z-index:-1;border-radius: 10px;">
                     <h4>{{"@"}}{{$user->name}}</h4>
                     <p>{{substr($user->profile_desp, 0, 200)}}</p>
                 </div>
@@ -29,7 +77,7 @@
         <div class="col-md-@if($user->photo_one || $user->photo_two == null)12 @else 6 @endif d-flex align-items-center justify-content-center mt-3">
             <div class="row">
                 @if($user->photo_one != null)
-                <div class="col-md-6">
+                <div class="col-6 col-md-6 col-sm-6">
                     <div class="box-img1">
                         <img class="bi" style="border-radious:10px;border: 4px solid white;width:270px;" src="@if($user->photo_one != null){{asset('photo')}}/{{$user->photo_one}}@else {{asset('profile/default.jpg')}}  @endif" alt="">
                     </div>
@@ -39,7 +87,7 @@
                 @endif
 
                 @if($user->photo_two != null)
-                <div class="col-md-6">
+                <div class="col-6 col-md-6 col-sm-6">
                     <div class="box-img1">
                         <img class="bi" style="border-radious:10px;border: 4px solid white;width:270px;" src="@if($user->photo_two != null){{asset('photo')}}/{{$user->photo_two}}@else {{asset('profile/default.jpg')}}  @endif" alt="">
                     </div>
@@ -56,8 +104,6 @@
             @if($user->video_one != null)
                 <div class="col-6">
                     <div class="box-img1">
-                        <!-- <iframe class="video" style="border-radius: 10px;" width="265" height="140" src="https://youtu.be/{{$user->video_two}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
-
                             <iframe class="video" style="border-radius: 10px;" width="265" height="140" src="{{$user->video_one}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>

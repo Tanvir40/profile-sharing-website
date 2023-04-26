@@ -83,6 +83,37 @@
             margin-bottom: 5px;
         }
         }
+
+        @media only screen and (max-width: 480px) {
+            .box{
+                width: 22rem !important; 
+            } 
+            .card{
+                width: 20rem !important;
+                margin-left:18px !important; 
+            } 
+            
+            .videos{
+                width: 80px !important;
+                height: 80px !important;
+            }
+            .footers{
+                width: 80px !important;
+                height: 80px !important;
+                border: 2px solid white;
+            } 
+
+            .video{
+                width: 80px !important;
+                height: 80px !important;
+            }
+            .footer{
+                width: 80px !important;
+                height: 80px !important;
+                border: 2px solid white;
+            } 
+        }
+        
        
     </style>
   </head>

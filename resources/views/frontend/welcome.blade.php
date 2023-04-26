@@ -1,13 +1,74 @@
 @include('../frontend/inc/header')
 
+    <style>
+               
+        @media only screen and (min-width: 1400px) {
+            .box{
+                width: 40rem !important; 
+            } 
 
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .box{
+                width: 29rem !important; 
+            }  
+        }
+
+        @media only screen and (max-width: 992px) {
+            .card{
+                width: 14rem !important;
+                margin-right:230px !important; 
+            }  
+        }
+        @media only screen and (max-width: 772px) {
+            .box{
+                width: 29rem !important; 
+            } 
+            .card{
+                width: 27rem !important;
+                margin-left:18px !important; 
+            }  
+        }
+
+        @media only screen and (max-width: 480px) {
+            .box{
+                width: 22rem !important; 
+            } 
+            .card{
+                width: 20rem !important;
+                margin-left:18px !important; 
+            } 
+            
+            .videos{
+                width: 80px !important;
+                height: 80px !important;
+            }
+            .footers{
+                width: 80px !important;
+                height: 80px !important;
+                border: 2px solid white;
+            } 
+
+            .video{
+                width: 80px !important;
+                height: 80px !important;
+            }
+            .footer{
+                width: 80px !important;
+                height: 80px !important;
+                border: 2px solid white;
+            } 
+        }
+        
+        
+    </style>
 
 <div class="">
     <div class="row">
         <div class="col-md-12">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                  
 
                 </div>
                 <div class="carousel-inner">
@@ -43,7 +104,7 @@
             </div>
 
             <div class="col-md-6">
-                <div class="box text-center text-white px-5 pb-3" style="width: 35rem;padding-top:4rem;background-color:#003B86;border-radius: 10px;">
+                <div class="box text-center text-white px-5 pb-3" style="padding-top:4rem;background-color:#003B86;border-radius: 10px;">
                 <a href="{{route('profile_details',$userone->id)}}"><img class="z-index:1;" style="border: 4px solid white;width:120px;border-radius: 50%; margin-top: -200px;" src="@if($userone->profile_photo != null){{asset('profile')}}/{{$userone->profile_photo}}@else {{asset('profile/default.jpg')}}  @endif" alt=""></a>
                     <div class="d-flex align-items-center justify-content-center">
                         <a href="{{route('profile_details',$userone->id)}}"><h4 class="text-white">{{'@'}}{{$userone->name}} &nbsp;</h4></a>
@@ -90,11 +151,11 @@
 
         <div class="row d-flex ">
 
-            <div class="text-center col-3">
+            <div class="text-center col-md-3">
                
             </div>
        
-            <div class="text-center col-6 d-flex">
+            <div class="text-center col-md-6 d-flex">
 
                <div class="row">
 
@@ -138,7 +199,7 @@
 
             
 
-            <div class="text-center col-3">
+            <div class="text-center col-md-3">
             
             </div>
 
