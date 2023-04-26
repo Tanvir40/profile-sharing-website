@@ -129,7 +129,7 @@
             @if($user->facebook != null)
                 <div class="col-6">
                     <div class="box3">
-                       <button class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;">Facebook</button>
+                       <button class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-facebook-official " aria-hidden="true"></i>&ensp; Facebook</button>
                     </div>
                 </div>
             @else
@@ -139,7 +139,7 @@
             @if($user->twitter != null)
                 <div class="col-6">
                     <div class="box3">
-                       <button class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;">Twitter</button>
+                       <button class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-twitter" aria-hidden="true"></i>&ensp; Twitter</button>
                     </div>
                 </div>
             @else
@@ -154,7 +154,7 @@
             @if($user->linkedin != null)
                 <div class="col-6">
                     <div class="box3">
-                       <button class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;">linkedin</button>
+                       <button class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-linkedin-square" aria-hidden="true"></i>&ensp; linkedin</button>
                     </div>
                 </div>
             @else
@@ -164,7 +164,7 @@
             @if($user->instragram != null)
                 <div class="col-6">
                     <div class="box3">
-                       <button class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;">instragram</button>
+                       <button class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-instagram" aria-hidden="true"></i>&ensp; Instragram</button>
                     </div>
                 </div>
             @else
@@ -179,7 +179,8 @@
             @if($user->tumblr != null)
                 <div class="col-6">
                     <div class="box3">
-                       <button class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;">tumblr</button>
+                       <button class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-tumblr-square" aria-hidden="true"></i>&ensp;
+                       Tumblr</button>
                     </div>
                 </div>
             @else
@@ -189,7 +190,7 @@
             @if($user->discord != null)
                 <div class="col-6">
                     <div class="box3">
-                       <button class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;">discord</button>
+                       <button class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-quora" aria-hidden="true"></i>&ensp; Quora</button>
                     </div>
                 </div>
             @else
@@ -204,7 +205,7 @@
             @if($user->reddit != null)
                 <div class="col-6">
                     <div class="box3">
-                       <button class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;">reddit</button>
+                       <button class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-reddit" aria-hidden="true"></i>&ensp; Reddit</button>
                     </div>
                 </div>
             @else
@@ -214,7 +215,7 @@
             @if($user->youtube != null)
                 <div class="col-6">
                     <div class="box3">
-                       <button class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;">youtube</button>
+                       <button class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-youtube-play" aria-hidden="true"></i>&ensp; Youtube</button>
                     </div>
                 </div>
             @else
@@ -229,7 +230,7 @@
             @if($user->whatsapp != null)
                 <div class="col-6">
                     <div class="box3">
-                       <button class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;">whatsapp</button>
+                       <button class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-whatsapp" aria-hidden="true"></i>&ensp; Whatsapp</button>
                     </div>
                 </div>
             @else
@@ -239,7 +240,7 @@
             @if($user->telegram != null)
                 <div class="col-6">
                     <div class="box3">
-                       <button class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;">telegram</button>
+                       <button class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-telegram" aria-hidden="true"></i>&ensp; Telegram</button>
                     </div>
                 </div>
             @else
