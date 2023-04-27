@@ -1,6 +1,6 @@
 @include('../frontend/inc/header')
 
-    <!-- <style>
+     <!--<style>
                
         @media only screen and (min-width: 1400px) {
             .box{
@@ -62,8 +62,45 @@
             } 
         }
         
-        
     </style> -->
+
+    <style>
+
+        @media only screen and (min-width: 380px){
+            .carousel_image{
+                width:100% !important;
+                height:300px !important;
+            }
+        }
+
+        @media only screen and (min-width: 600px){
+            .carousel_image{
+                width:100%!important;
+                height:450px!important;
+            }
+        }
+
+        @media only screen and (min-width: 801px){
+            .carousel_image{
+                width:100%!important;
+                height:450px!important;
+            }
+        }
+
+        @media only screen and (min-width: 1025px){
+            .carousel_image{
+                width:100%!important;
+                height:500px!important;
+            }
+        }
+
+        @media only screen and (min-width: 1281px){
+            .carousel_image{
+                width:100%!important;
+                height:500px!important;
+            }
+        }
+    </style>
 
 <div class="">
     <div class="">
@@ -74,7 +111,7 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img width="100%" height="500px" src="{{asset('frontend/img/1600w-cVzLo3B1IHE.webp')}}" class="d-block w-100" alt="...">
+                    <img width="100%" height="500px" class="carousel_image" src="{{asset('frontend/img/1600w-cVzLo3B1IHE.webp')}}" class="d-block w-100" alt="...">
                   </div>
                   
                 </div>

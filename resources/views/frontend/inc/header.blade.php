@@ -82,6 +82,7 @@
             margin-left: 90px;
             margin-bottom: 5px;
         }
+        
         }
 
         @media only screen and (max-width: 480px) {
