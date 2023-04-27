@@ -34,3 +34,4 @@ Route::post('/desp-update', [BackendController::class, 'desp_update'])->name('de
 Route::post('/photo-update', [BackendController::class, 'photo_update'])->name('photo_update');
 Route::post('/video-update', [BackendController::class, 'video_update'])->name('video_update');
 Route::post('/profile-update', [BackendController::class, 'profile_update'])->name('profile_update');
+Route::post('/social-update', [BackendController::class, 'social_update'])->name('social_update');

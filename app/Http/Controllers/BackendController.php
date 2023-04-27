@@ -118,4 +118,20 @@ class BackendController extends Controller
         ]);
         return back();
     }
+
+    function social_update(Request $request){
+        User::where('id', $request->id)->update([
+            'facebook'=>$request->facebook,
+            'twitter'=>$request->twitter,
+            'linkedin'=>$request->linkedin,
+            'instragram'=>$request->instragram,
+            'tumblr'=>$request->tumblr,
+            'quora'=>$request->quora,
+            'reddit'=>$request->reddit,
+            'youtube'=>$request->youtube,
+            'whatsapp'=>$request->whatsapp,
+            'telegram'=>$request->telegram,
+        ]);
+        return back();
+    }
 }

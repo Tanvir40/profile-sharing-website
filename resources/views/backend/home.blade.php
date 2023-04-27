@@ -194,43 +194,47 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Profile Name</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Social Links</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+      <form action="{{route('social_update')}}" method="post">
+          @csrf
+          <input type="hidden" value="{{Auth::id()}}" name="id">
       <label for="" class="form-label">FaceBook Url</label>
-      <input type="link" class="form-control mb-2" placeholder="Enter Your FaceBook Url">
+      <input type="link" name="facebook" class="form-control mb-2" placeholder="Enter Your FaceBook Url" @if($user->facebook != null) value="{{$user->facebook}}" @else value=""  @endif">
 
       <label for="" class="form-label">Twitter Url</label>
-      <input type="link" class="form-control mb-2" placeholder="Enter Your Twitter Url">
+      <input type="link" name="twitter" class="form-control mb-2" placeholder="Enter Your Twitter Url" @if($user->twitter != null) value="{{$user->twitter}}" @else value=""  @endif">
 
       <label for="" class="form-label">Linkedin Url</label>
-      <input type="link" class="form-control mb-2" placeholder="Enter Your Linkedin Url">
+      <input type="link" name="linkedin" class="form-control mb-2" placeholder="Enter Your Linkedin Url" @if($user->linkedin != null) value="{{$user->linkedin}}" @else value=""  @endif">
 
       <label for="" class="form-label">Instragram Url</label>
-      <input type="link" class="form-control mb-2" placeholder="Enter Your Instragram Url">
+      <input type="link" name="instragram" class="form-control mb-2" placeholder="Enter Your Instragram Url" @if($user->instragram != null) value="{{$user->instragram}}" @else value=""  @endif">
 
       <label for="" class="form-label">Tumblr Url</label>
-      <input type="link" class="form-control mb-2" placeholder="Enter Your Tumblr Url">
+      <input type="link" name="tumblr" class="form-control mb-2" placeholder="Enter Your Tumblr Url" @if($user->tumblr != null) value="{{$user->tumblr}}" @else value=""  @endif">
 
-      <label for="" class="form-label">Discord Url</label>
-      <input type="link" class="form-control mb-2" placeholder="Enter Your Discord Url">
+      <label for="" class="form-label">Quora Url</label>
+      <input type="link" name="quora" class="form-control mb-2" placeholder="Enter Your quora Url" @if($user->quora != null) value="{{$user->quora}}" @else value=""  @endif">
 
       <label for="" class="form-label">Reddit Url</label>
-      <input type="link" class="form-control mb-2" placeholder="Enter Your Reddit Url">
+      <input type="link" name="reddit" class="form-control mb-2" placeholder="Enter Your Reddit Url" @if($user->reddit != null) value="{{$user->reddit}}" @else value=""  @endif">
 
       <label for="" class="form-label">Youtube Url</label>
-      <input type="link" class="form-control mb-2" placeholder="Enter Your 	Youtube Url">
+      <input type="link" name="youtube" class="form-control mb-2" placeholder="Enter Your 	Youtube Url" @if($user->youtube != null) value="{{$user->youtube}}" @else value=""  @endif">
 
       <label for="" class="form-label">Whatsapp Url</label>
-      <input type="link" class="form-control mb-2" placeholder="Enter Your Whatsapp Url">
+      <input type="link" name="whatsapp" class="form-control mb-2" placeholder="Enter Your Whatsapp Url" @if($user->whatsapp != null) value="{{$user->whatsapp}}" @else value=""  @endif">
 
       <label for="" class="form-label">Telegram Url</label>
-      <input type="link" class="form-control mb-2" placeholder="Enter Your Telegram Url">
+      <input type="link" name="telegram" class="form-control mb-2" placeholder="Enter Your Telegram Url" @if($user->telegram != null) value="{{$user->telegram}}" @else value=""  @endif">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
       </div>
+    </form>
     </div>
   </div>
 </div>
