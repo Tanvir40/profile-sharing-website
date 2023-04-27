@@ -1,6 +1,6 @@
 @include('../frontend/inc/header')
 
-    <style>
+    <!-- <style>
                
         @media only screen and (min-width: 1400px) {
             .box{
@@ -63,10 +63,10 @@
         }
         
         
-    </style>
+    </style> -->
 
 <div class="">
-    <div class="row">
+    <div class="">
         <div class="col-md-12">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
