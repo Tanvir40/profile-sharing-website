@@ -18,16 +18,17 @@
         @media only screen and (max-width: 992px) {
             .card{
                 width: 14rem !important;
-                margin-right:230px !important; 
+                
             }  
         }
+        
         @media only screen and (max-width: 772px) {
             .box{
                 width: 29rem !important; 
             } 
             .card{
                 width: 27rem !important;
-                margin-left:18px !important; 
+                
             }  
         }
 
@@ -37,7 +38,7 @@
             } 
             .card{
                 width: 20rem !important;
-                margin-left:18px !important; 
+                
             } 
             
             .videos{
