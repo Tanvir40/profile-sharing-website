@@ -114,14 +114,16 @@
                 border: 2px solid white;
             } 
         }
-        
+        .navbar-nav{
+            padding-left: 75px;
+        }
        
     </style>
   </head>
-  <body style="background-color: #FEF9C2;">
+  <body style="background-color: #FEFA86;">
 
-  
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FEF9C2;">
+
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FEFA86;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

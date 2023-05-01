@@ -100,6 +100,34 @@
                 height:500px!important;
             }
         }
+
+        @media only screen and (min-width: 481px) and (max-width: 767px){
+            .card{
+                width:350px!important;
+                height:265px!important;
+            }
+           .box{
+            width:355px!important;
+           }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 900px){
+            .card{
+                width:174px!important;
+                height:265px!important;
+            }
+           .box{
+            width:355px!important;
+           }
+           .videos{
+                width: 80px !important;
+                height: 80px !important;
+            }
+            .footers{
+                width: 80px !important;
+                height: 80px !important;
+                border: 2px solid white;
+            } 
+        }
     </style>
 
 <div class="">
@@ -204,7 +232,7 @@
                             <div class="card-body">
                             <a href="{{route('profile_details',$user->id)}}"><img class="z-index:1;" style="border: 4px solid white;width:70px;border-radius: 50%; margin-top: -70px;" src="@if($user->profile_photo != null){{asset('profile')}}/{{$user->profile_photo}}@else {{asset('profile/default.jpg')}}  @endif" alt=""></a>
                             <a href="{{route('profile_details',$user->id)}}"><h6 class="text-white bold">{{'@'}}{{$user->name}}</h6></a>
-                                <p class="text-white fw-light" style="font-size:0.8rem;">{{substr($user->profile_desp, 0, 110)}}</p>
+                                <p class="text-white fw-light" style="font-size:0.8rem;">{{substr($user->profile_desp, 0, 90)}}</p>
 
                                 <div class="row m-0 p-0">
                     

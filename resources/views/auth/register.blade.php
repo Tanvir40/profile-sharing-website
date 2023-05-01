@@ -43,30 +43,31 @@
 .form input {
   font-family: "Roboto", sans-serif;
   outline: 0;
-  background: #FEF9C2;
+  background: #E8F0FE;
   width: 100%;
   border: 0;
   margin: 0 0 15px;
   padding: 15px;
   box-sizing: border-box;
   font-size: 14px;
+ 
 }
 .form button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #4CAF50;
+  background: #003B86;
   width: 100%;
   border: 0;
   padding: 15px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
 }
 .form button:hover,.form button:active,.form button:focus {
-  background: #43A047;
+  background: #003B86;
 }
 .form .message {
   margin: 15px 0 0;
@@ -114,7 +115,7 @@
   color: #EF3B3A;
 }
 body {
-  background-color: #FEF9C2; /* fallback for old browsers */
+  background-color: #FEFA86; /* fallback for old browsers */
 
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -165,7 +166,7 @@ body {
         
                                  
         <button>Register</button>
-        <p class="message">Already registered? <a href="{{ route('login') }}">Sign In</a></p>
+        <p class="message">Already registered? <a style="color:#003B86 !important;" href="{{ route('login') }}">Sign In</a></p>
       
       
     </form>
