@@ -29,7 +29,21 @@
             </div>
         </div>
 
-       
+        @if($user->role == 'admin')
+          <div class="col-12 d-flex align-items-center justify-content-center mt-3">
+              
+            <div class="row">
+                <div class="col-12">
+                    <div class="box3">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#bannerModal" class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:360px;background-color:#E2E2E2;border:0px;border-radius: 25px;">Add Home Page Banner <i class="fa fa-upload float-end" aria-hidden="true"></i></a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+          </div>
+        @endif
+
         <div class="col-12 d-flex align-items-center justify-content-center mt-3">
             
           <div class="row">
@@ -85,6 +99,31 @@
 
 {{--modal start--}}
 
+<!-- banner name modal -->
+<div class="modal fade" id="bannerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Banner Update</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="{{route('banner_update')}}" method="post" enctype="multipart/form-data">
+          @csrf
+        <input type="hidden" value="{{Auth::id()}}" name="id">
+        <label for="" class="form-label">Banner</label>
+        <small class="text-warning">Banner Size (1600*800)px</small>
+        <input type="file" name="banner" class="form-control mb-2" >
+
+      </div>
+      <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
 
 <!-- profile name modal -->
 <div class="modal fade" id="ProfileModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

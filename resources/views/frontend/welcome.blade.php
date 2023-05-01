@@ -139,7 +139,7 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img width="100%" height="500px" class="carousel_image" src="{{asset('frontend/img/1600w-cVzLo3B1IHE.webp')}}" class="d-block w-100" alt="...">
+                    <img width="100%" height="500px" class="carousel_image" src="{{asset('banner')}}/{{$userone->banner}}" class="d-block w-100" alt="...">
                   </div>
                   
                 </div>

@@ -29,6 +29,7 @@ Route::get('/profiles={slug}', [FrontendController::class, 'profile_details'])->
 
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::post('/banner_update', [BackendController::class, 'banner_update'])->name('banner_update');
 Route::post('/name-update', [BackendController::class, 'name_update'])->name('name_update');
 Route::post('/desp-update', [BackendController::class, 'desp_update'])->name('desp_update');
 Route::post('/photo-update', [BackendController::class, 'photo_update'])->name('photo_update');

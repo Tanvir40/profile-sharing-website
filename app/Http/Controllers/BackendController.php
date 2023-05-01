@@ -6,7 +6,22 @@ use Illuminate\Http\Request;
 use App\Models\User;
 
 class BackendController extends Controller
+
+
 {
+
+    function banner_update(Request $request){
+        $uploaded_file = $request->banner;
+        $extension = $uploaded_file->getClientOriginalExtension();
+        $file_name = substr(md5(time()), 0, 10).'.'.$extension;
+        $uploaded_file->move("banner", $file_name);
+
+        User::where('id', $request->id)->update([
+            'banner'=>$file_name,
+        ]);
+        return back();
+    }
+
     function name_update(Request $request){
 
         if($request->name && $request->profile_photo){
