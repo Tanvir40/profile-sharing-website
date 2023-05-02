@@ -130,8 +130,49 @@ body {
   
   
 </head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-<body translate="no">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FEFA86;">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+            <div class="collapse navbar-collapse flex-row-reverse g-2 text align-items-center justify-content-center" style="margin-top: 45px;margin-right: 0px;" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                  <li class="nav-item px-2">
+                    <a class="nav-link active text-primary text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding: 10px;" aria-current="page" href="{{route('index')}}">Home</a>
+                  </li>
+                  @auth
+                  <li class="nav-item  px-2">
+                      <a class="nav-link  active text-primary text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding: 10px;" href="{{route('profile')}}">Profile</a>
+                    </li>
+                    <li class="nav-item  px-2">
+                        <a class="nav-link  active text-primary text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding: 10px;" href="{{route('home')}}">Dashboard</a>
+                    </li>
+                    <li class="nav-item  px-2">
+                      <a class="nav-link  active text-primary text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding: 10px;" href="{{ route('logout') }}"  onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Logout</a>
+                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                  </li>
+                    @else
+                  <li class="nav-item  px-2">
+                    <a class="nav-link active text-primary text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding: 10px;"  href="{{route('register')}}">Sign up</a>
+                  </li>
+                  <li class="nav-item  px-2">
+                      <a class="nav-link  active text-primary text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding: 10px;" href="{{route('login')}}">Login</a>
+                  </li>
+                  @endauth
+                </ul>
+    </div>
+    </div>
+  </nav>
+<body translate="no" style="background-color: #FEFA86;!important">
   <div class="login-page">
   <div class="form">
     <h3>Sign Up To Our Community</h3>
@@ -173,6 +214,7 @@ body {
     
   </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
 
   <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
