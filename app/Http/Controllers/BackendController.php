@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Carbon\Carbon;
+use Illuminate\Validation\Rules\Password;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class BackendController extends Controller
 
@@ -128,10 +132,36 @@ class BackendController extends Controller
     }
 
     function profile_update(Request $request){
-        User::where('id', $request->id)->update([
-            'profile_url'=>$request->profile_url,
-        ]);
-        return back();
+
+
+    //    return $request->all();
+    //    die();
+        // $request->validate([
+        //     'old_password'=>'required',
+        //     'password'=>'required',
+        //     'confirmpassword'=>'required',
+        //     'password'=>Password::min(8)
+        //                      ->letters()
+        //                      ->mixedCase()
+        //                      ->numbers()
+        //                      ->symbols(),
+        //      'password'=>'confirmed',
+        // ]);
+ 
+        if(Hash::check($request->old_password , Auth::user()->password)){
+            if(Hash::check($request->password , Auth::user()->password)){
+                return back()->with('massage', 'You already using this password!');
+            }
+            else{
+                User::find($request->id)->update([
+                    'password'=>bcrypt($request->password),
+                    'updated_at'=>carbon::now(),
+                ]);
+                return back()->with('massage', 'Password updated Succesfully!');
+            }
+            return back()->with('massage', 'Old Password Dosent match');
+        } 
+        return back()->with('massage', 'SomeThing Wrong');
     }
 
     function social_update(Request $request){

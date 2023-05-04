@@ -67,7 +67,7 @@
             </div>
 
             <div class="box1 d-flex align-items-center justify-content-center" style="margin-top:-50px;">
-                <div class="box text-center text-white px-5 pb-5" style="width:35rem !important;padding-top:4rem;background-color:#003B86;z-index:-1;border-radius: 10px;">
+                <div class="box text-center text-white px-5 pb-5" style="width:35rem !important;padding-top:4rem;background-color:rgb(25,25,112);z-index:-1;border-radius: 30px;">
                     <h4>{{"@"}}{{$user->name}}</h4>
                     <p>{{substr($user->profile_desp, 0, 200)}}</p>
                 </div>
@@ -129,7 +129,7 @@
             @if($user->facebook != null)
                 <div class="col-6">
                     <div class="box3">
-                       <a href="{{$user->facebook}}" class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-facebook-official " aria-hidden="true"></i>&ensp; Facebook</a>
+                       <a href="{{$user->facebook}}" class="btn btn-primary btn-sm text-black px-3 fw-bold py-3" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-facebook-official " aria-hidden="true"></i>&ensp; Facebook</a>
                     </div>
                 </div>
             @else
@@ -139,7 +139,7 @@
             @if($user->twitter != null)
                 <div class="col-6">
                     <div class="box3">
-                    <a href="{{$user->twitter}}" class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-twitter" aria-hidden="true"></i>&ensp; Twitter</a>
+                    <a href="{{$user->twitter}}" class="btn btn-primary btn-sm text-black px-3 fw-bold py-3" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-twitter" aria-hidden="true"></i>&ensp; Twitter</a>
                     </div>
                 </div>
             @else
@@ -154,7 +154,7 @@
             @if($user->linkedin != null)
                 <div class="col-6">
                     <div class="box3">
-                    <a href="{{$user->linkedin}}" class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-linkedin-square" aria-hidden="true"></i>&ensp; linkedin</a>
+                    <a href="{{$user->linkedin}}" class="btn btn-primary btn-sm text-black px-3 fw-bold py-3" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-linkedin-square" aria-hidden="true"></i>&ensp; linkedin</a>
                     </div>
                 </div>
             @else
@@ -164,7 +164,7 @@
             @if($user->instragram != null)
                 <div class="col-6">
                     <div class="box3">
-                    <a href="{{$user->instragram}}" class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-instagram" aria-hidden="true"></i>&ensp; Instragram</a>
+                    <a href="{{$user->instragram}}" class="btn btn-primary btn-sm text-black px-3 fw-bold py-3" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-instagram" aria-hidden="true"></i>&ensp; Instragram</a>
                     </div>
                 </div>
             @else
@@ -179,7 +179,7 @@
             @if($user->tumblr != null)
                 <div class="col-6">
                     <div class="box3">
-                    <a href="{{$user->tumblr}}" class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-tumblr-square" aria-hidden="true"></i>&ensp;
+                    <a href="{{$user->tumblr}}" class="btn btn-primary btn-sm text-black px-3 fw-bold py-3" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-tumblr-square" aria-hidden="true"></i>&ensp;
                        Tumblr</a>
                     </div>
                 </div>
@@ -190,7 +190,7 @@
             @if($user->quora != null)
                 <div class="col-6">
                     <div class="box3">
-                    <a href="{{$user->quora}}" class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-quora" aria-hidden="true"></i>&ensp; Quora</a>
+                    <a href="{{$user->quora}}" class="btn btn-primary btn-sm text-black px-3 fw-bold py-3" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-quora" aria-hidden="true"></i>&ensp; Quora</a>
                     </div>
                 </div>
             @else
@@ -205,7 +205,7 @@
             @if($user->reddit != null)
                 <div class="col-6">
                     <div class="box3">
-                    <a href="{{$user->reddit}}" class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-reddit" aria-hidden="true"></i>&ensp; Reddit</a>
+                    <a href="{{$user->reddit}}" class="btn btn-primary btn-sm text-black px-3 fw-bold py-3" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-reddit" aria-hidden="true"></i>&ensp; Reddit</a>
                     </div>
                 </div>
             @else
@@ -215,7 +215,7 @@
             @if($user->youtube != null)
                 <div class="col-6">
                     <div class="box3">
-                    <a href="{{$user->youtube}}" class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-youtube-play" aria-hidden="true"></i>&ensp; Youtube</a>
+                    <a href="{{$user->youtube}}" class="btn btn-primary btn-sm text-black px-3 fw-bold py-3" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-youtube-play" aria-hidden="true"></i>&ensp; Youtube</a>
                     </div>
                 </div>
             @else
@@ -230,7 +230,7 @@
             @if($user->whatsapp != null)
                 <div class="col-6">
                     <div class="box3">
-                    <a href="{{$user->whatsapp}}" class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-whatsapp" aria-hidden="true"></i>&ensp; Whatsapp</a>
+                    <a href="{{$user->whatsapp}}" class="btn btn-primary btn-sm text-black px-3 fw-bold py-3" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-whatsapp" aria-hidden="true"></i>&ensp; Whatsapp</a>
                     </div>
                 </div>
             @else
@@ -238,9 +238,9 @@
             @endif
 
             @if($user->telegram != null)
-                <div class="col-6">
+                <div class="col-6 mb-3">
                     <div class="box3">
-                    <a href="{{$user->telegram}}" class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-telegram" aria-hidden="true"></i>&ensp; Telegram</a>
+                    <a href="{{$user->telegram}}" class="btn btn-primary btn-sm text-black px-3 fw-bold py-3" style="width:260px;background-color:#E2E2E2;border:0px;border-radius: 25px;"><i class="fa fa-telegram" aria-hidden="true"></i>&ensp; Telegram</a>
                     </div>
                 </div>
             @else

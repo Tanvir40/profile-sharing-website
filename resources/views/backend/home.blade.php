@@ -13,16 +13,16 @@
             
             <div class=" d-flex align-items-center justify-content-center m" style="margin-top:120px;">
                 
-                <div class="box text-center text-white px-5 pb-3" style="width: 35rem;padding-top:4rem;background-color:#003B86;border-radius: 10px;">
-                    <img class="z-index:1;" style="border: 4px solid white;width:120px;border-radius: 50%; margin-top: -200px;" src="@if($user->profile_photo != null){{asset('profile')}}/{{$user->profile_photo}}@else {{asset('profile/default.jpg')}}  @endif" alt="">
+                <div class="box text-center text-white px-5 pb-3" style="width: 35rem;padding-top:4rem;background-color:rgb(25,25,112);border-radius: 30px;">
+                    <img class="z-index:1;" style="border: 4px solid white;width:120px;border-radius: 50%; margin-top: -160px;" src="@if($user->profile_photo != null){{asset('profile')}}/{{$user->profile_photo}}@else {{asset('profile/default.jpg')}}  @endif" alt="">
                     <div class="d-flex align-items-center justify-content-center">
-                        <h4>{{"@"}}{{Auth::user()->name}} &nbsp;</h4>
+                        <h4 class="text-white">{{"@"}}{{Auth::user()->name}} &nbsp;</h4>
                         <a data-bs-toggle="modal" data-bs-target="#ProfileModal">
                             <i class="text-white fa fa-pencil-square-o" aria-hidden="true" ></i>
                         </a>
                     </div>
                     <div class="d-flex">
-                    <p>{{$user->profile_desp}}</p>
+                    <p class="text-white">{{$user->profile_desp}}</p>
                     <a data-bs-toggle="modal" data-bs-target="#ProfiledespModal"><i class="text-white fa fa-pencil-square-o" aria-hidden="true"></i></a>
                 </div>
                 </div>
@@ -35,13 +35,26 @@
             <div class="row">
                 <div class="col-12">
                     <div class="box3">
-                      <a href="" data-bs-toggle="modal" data-bs-target="#bannerModal" class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:360px;background-color:#E2E2E2;border:0px;border-radius: 25px;">Add Home Page Banner <i class="fa fa-upload float-end" aria-hidden="true"></i></a>
+                      <a  href="" data-bs-toggle="modal" data-bs-target="#bannerModal" class="btn btn-primary btn-sm px-3 fw-bold py-3" style="width:360px;background-color:#E2E2E2;border:0px;border-radius: 25px;color:rgb(26, 0, 0);">Home Page Banner <i class="fa fa-upload float-end" aria-hidden="true"></i></a>
                     </div>
                     
                 </div>
                 
             </div>
           </div>
+
+          <div class="col-12 d-flex align-items-center justify-content-center mt-3">
+              
+              <div class="row">
+                  <div class="col-12">
+                      <div class="box3">
+                        <a  href="{{route('all_user')}}" class="btn btn-primary btn-sm px-3 fw-bold py-3" style="width:360px;background-color:#E2E2E2;border:0px;border-radius: 25px;color:rgb(26, 0, 0);">All User List <i class="fa fa-upload float-end" aria-hidden="true"></i></a>
+                      </div>
+                      
+                  </div>
+                  
+              </div>
+            </div>
         @endif
 
         <div class="col-12 d-flex align-items-center justify-content-center mt-3">
@@ -49,7 +62,7 @@
           <div class="row">
               <div class="col-12">
                   <div class="box3">
-                     <a href="" data-bs-toggle="modal" data-bs-target="#ProfilephotoModal" class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:360px;background-color:#E2E2E2;border:0px;border-radius: 25px;">Add Photo <i class="fa fa-upload float-end" aria-hidden="true"></i></a>
+                     <a href="" data-bs-toggle="modal" data-bs-target="#ProfilephotoModal" class="btn btn-primary btn-sm px-3 fw-bold py-3" style="width:360px;background-color:#E2E2E2;border:0px;border-radius: 25px;color:rgb(26, 0, 0);">Add Photo <i class="fa fa-upload float-end" aria-hidden="true"></i></a>
                   </div>
                   
               </div>
@@ -62,7 +75,7 @@
           <div class="row">
               <div class="col-12">
                   <div class="box3">
-                     <a href="" data-bs-toggle="modal" data-bs-target="#ProfilevideoModal" class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:360px;background-color:#E2E2E2;border:0px;border-radius: 25px;">Add Video Link <i class="float-end  fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                     <a href="" data-bs-toggle="modal" data-bs-target="#ProfilevideoModal" class="btn btn-primary btn-sm px-3 fw-bold py-3" style="width:360px;background-color:#E2E2E2;border:0px;border-radius: 25px;color:rgb(26, 0, 0);"">Add Video Link <i class="float-end  fa fa-pencil-square-o" aria-hidden="true"></i></a>
                   </div>
               </div>
               
@@ -74,7 +87,7 @@
           <div class="row">
               <div class="col-12">
                   <div class="box3">
-                     <a href="" data-bs-toggle="modal" data-bs-target="#ProfilesocialModal" class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:360px;background-color:#E2E2E2;border:0px;border-radius: 25px;">Add Social Link <i class="float-end fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                     <a href="" data-bs-toggle="modal" data-bs-target="#ProfilesocialModal" class="btn btn-primary btn-sm px-3 fw-bold py-3" style="width:360px;background-color:#E2E2E2;border:0px;border-radius: 25px;color:rgb(26, 0, 0);">Add Social Link <i class="float-end fa fa-pencil-square-o" aria-hidden="true"></i></a>
                   </div>
               </div>
               
@@ -86,7 +99,23 @@
           <div class="row">
               <div class="col-12">
                   <div class="box3">
-                     <a href="" data-bs-toggle="modal" data-bs-target="#ProfileurlModal" class="btn btn-primary btn-sm text-primary px-3 fw-bold" style="width:360px;background-color:#E2E2E2;border:0px;border-radius: 25px;">Url<i class="fa fa-link" aria-hidden="true"></i><br> Title<i class=" fa fa-pencil-square-o" aria-hidden="true"></i> </a>
+                    @if(session('massage'))
+                    <strong class="text-success">{{session('massage')}}</strong>
+                    <br>
+                    @endif
+                    @error('old_password')
+                    <strong class="text-danger">{{$message}}</strong>
+                    <br>
+                    @enderror
+                    @error('password')
+                    <strong class="text-danger">{{$message}}</strong>
+                    <br>
+                    @enderror
+                    @error('confirmpassword')
+                    <strong class="text-danger">{{$message}}</strong>
+                    <br>
+                    @enderror
+                     <a href="" data-bs-toggle="modal" data-bs-target="#ProfileurlModal" class="btn btn-primary btn-sm px-3 fw-bold py-3" style="width:360px;background-color:#E2E2E2;border:0px;border-radius: 25px;color:rgb(26, 0, 0);">Change Password<i class="float-end fa fa-pencil-square-o" aria-hidden="true"></i> </a>
                   </div>
               </div>
               
@@ -117,13 +146,15 @@
 
       </div>
       <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save changes</button>
+      <button type="button" class="btn text-dark" style="background-color:rgb(210,105,30);" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn text-dark" style="background-color:rgb(210,105,30);">Save changes</button>
       </div>
     </form>
     </div>
   </div>
 </div>
+
+
 
 <!-- profile name modal -->
 <div class="modal fade" id="ProfileModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -283,15 +314,21 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Profile Url</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
       <form action="{{route('profile_update')}}" method="post">
           @csrf
         <input type="hidden" value="{{Auth::id()}}" name="id">
-      <label for="" class="form-label">Profile Url</label>
-      <input type="text" name="profile_url" class="form-control" placeholder="Enter Your Profile Url">
+      <label for="" class="form-label mb-2">Old Password</label>
+      <input type="text" name="old_password" class="form-control" placeholder="Enter Your Old Password">
+
+      <label for="" class="form-label mb-2">New Password</label>
+      <input type="text" name="password" class="form-control" placeholder="Enter Your New Password">
+
+      <label for="" class="form-label mb-2">Confirm Password</label>
+      <input type="text" name="confirmpassword" class="form-control" placeholder="Enter Your Confirm Password">
       </div>
       <div class="modal-footer">
         <button type="submit" class="btn btn-primary">Save changes</button>

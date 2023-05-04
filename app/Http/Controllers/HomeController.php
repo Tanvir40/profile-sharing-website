@@ -30,4 +30,11 @@ class HomeController extends Controller
             'user'=>$user, 
         ]);
     }
+
+    function user_list(){
+        $users = User::all();
+        return view('backend.user_list',[
+            'users'=>$users, 
+        ]);
+    }
 }

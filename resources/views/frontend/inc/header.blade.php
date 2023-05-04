@@ -114,21 +114,19 @@
                 border: 2px solid white;
             } 
         }
-
-        @media only screen and (min-width: 990px) {
+         @media only screen and (min-width: 990px) {
           .navbar-nav{
             padding-left: 75px;
             }  
         }
-        
        
     </style>
   </head>
-  <body style="background-color: #FEFA86;">
+  <body style="background-color: rgb(210,180,140);">
 
 
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FEFA86;">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(210,180,140);">
+  <div class="container-fluid">
     <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -138,17 +136,29 @@
             <div class="collapse navbar-collapse flex-row-reverse g-2 text align-items-center justify-content-center" style="margin-top: 45px;margin-right: 80px;" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                   <li class="nav-item px-2">
-                    <a class="nav-link active text-primary text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding: 10px;" aria-current="page" href="{{route('index')}}">Home</a>
+                    <a class="nav-link active  text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding-left: 30px !important;
+    padding-right: 30px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important; color:rgb(26, 0, 0);" aria-current="page" href="{{route('index')}}">Home</a>
                   </li>
                   @auth
                   <li class="nav-item  px-2">
-                      <a class="nav-link  active text-primary text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding: 10px;" href="{{route('profile')}}">Profile</a>
+                      <a class="nav-link  active  text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding-left: 30px !important;
+    padding-right: 30px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;color:rgb(26, 0, 0);" href="{{route('profile')}}">Profile</a>
                     </li>
                     <li class="nav-item  px-2">
-                        <a class="nav-link  active text-primary text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding: 10px;" href="{{route('home')}}">Dashboard</a>
+                        <a class="nav-link  active  text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding-left: 30px !important;
+    padding-right: 30px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;color:rgb(26, 0, 0);" href="{{route('home')}}">Dashboard</a>
                     </li>
                     <li class="nav-item  px-2">
-                      <a class="nav-link  active text-primary text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding: 10px;" href="{{ route('logout') }}"  onclick="event.preventDefault();
+                      <a class="nav-link  active  text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding-left: 30px !important;
+    padding-right: 30px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;color:rgb(26, 0, 0);" href="{{ route('logout') }}"  onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">Logout</a>
                                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
@@ -156,13 +166,19 @@
                   </li>
                     @else
                   <li class="nav-item  px-2">
-                    <a class="nav-link active text-primary text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding: 10px;"  href="{{route('register')}}">Sign up</a>
+                    <a class="nav-link active  text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding-left: 30px !important;
+    padding-right: 30px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;color:rgb(26, 0, 0);"  href="{{route('register')}}">Sign up</a>
                   </li>
                   <li class="nav-item  px-2">
-                      <a class="nav-link  active text-primary text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding: 10px;" href="{{route('login')}}">Login</a>
+                      <a class="nav-link  active  text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding-left: 30px !important;
+    padding-right: 30px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;color:rgb(26, 0, 0);" href="{{route('login')}}">Login</a>
                   </li>
                   @endauth
                 </ul>
     </div>
-    </div>
-  </nav>
+  </div>
+</nav>
