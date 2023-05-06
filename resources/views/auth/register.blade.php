@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   
-
+    <link href="{{asset('logo.jpeg')}}" rel="icon" type="image/x-icon">
     <!-- <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
 
     <meta name="apple-mobile-web-app-title" content="CodePen">
@@ -17,7 +17,7 @@
 
 
   
-  <title>Login Form</title>
+  <title>Register Form</title>
   
   
   
@@ -115,7 +115,7 @@
   color: #EF3B3A;
 }
 body {
-  background-color: #FEFA86; /* fallback for old browsers */
+  background-color: rgb(210,180,140); /* fallback for old browsers */
 
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -133,9 +133,11 @@ body {
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FEFA86;">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(210,180,140);">
     <div class="container-fluid">
-    <a class="navbar-brand" href="#"></a>
+    <a class="navbar-brand " href="{{route('index')}}">
+    <img width="80px" src="{{asset('logo.jpeg')}}" alt="">
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -144,17 +146,20 @@ body {
             <div class="collapse navbar-collapse flex-row-reverse g-2 text align-items-center justify-content-center" style="margin-top: 45px;margin-right: 0px;" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                   <li class="nav-item px-2">
-                    <a class="nav-link active text-primary text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding: 10px;" aria-current="page" href="{{route('index')}}">Home</a>
+                    <a class="nav-link active text-dark text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding-left: 30px !important;
+    padding-right: 30px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;" aria-current="page" href="{{route('index')}}">Home</a>
                   </li>
                   @auth
                   <li class="nav-item  px-2">
                       <a class="nav-link  active text-primary text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding: 10px;" href="{{route('profile')}}">Profile</a>
                     </li>
                     <li class="nav-item  px-2">
-                        <a class="nav-link  active text-primary text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding: 10px;" href="{{route('home')}}">Dashboard</a>
+                        <a class="nav-link  active text-dark text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding: 10px;" href="{{route('home')}}">Dashboard</a>
                     </li>
                     <li class="nav-item  px-2">
-                      <a class="nav-link  active text-primary text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding: 10px;" href="{{ route('logout') }}"  onclick="event.preventDefault();
+                      <a class="nav-link  active text-dark text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding: 10px;" href="{{ route('logout') }}"  onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">Logout</a>
                                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
@@ -162,17 +167,23 @@ body {
                   </li>
                     @else
                   <li class="nav-item  px-2">
-                    <a class="nav-link active text-primary text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding: 10px;"  href="{{route('register')}}">Sign up</a>
+                    <a class="nav-link active text-dark text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding-left: 30px !important;
+    padding-right: 30px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;"  href="{{route('register')}}">Sign up</a>
                   </li>
                   <li class="nav-item  px-2">
-                      <a class="nav-link  active text-primary text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding: 10px;" href="{{route('login')}}">Login</a>
+                      <a class="nav-link  active text-dark text-bold fw-bold border px-3 py-0" style="background-color:#E2E2E2;border-radius: 25px;padding-left: 30px !important;
+    padding-right: 30px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;" href="{{route('login')}}">Login</a>
                   </li>
                   @endauth
                 </ul>
     </div>
     </div>
   </nav>
-<body translate="no" style="background-color: #FEFA86;!important">
+<body translate="no" style="background-color: rgb(210,180,140);!important">
   <div class="login-page">
   <div class="form">
     <h3>Sign Up To Our Community</h3>
@@ -206,7 +217,7 @@ body {
 
         
                                  
-        <button>Register</button>
+        <button style="background-color:rgb(25,25,112)">Register</button>
         <p class="message">Already registered? <a style="color:#003B86 !important;" href="{{ route('login') }}">Sign In</a></p>
       
       

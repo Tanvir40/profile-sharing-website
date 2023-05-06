@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio Website</title>
+    <title>Artful Tribe</title>
+    <link href="{{asset('logo.jpeg')}}" rel="icon" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -117,8 +118,18 @@
          @media only screen and (min-width: 990px) {
           .navbar-nav{
             padding-left: 75px;
-            }  
+            } 
+            .navbar-brand{
+                padding-top:35px!important;
+            }
         }
+        
+         @media only screen and (min-width: 600px) and (max-width: 991px){
+             .nav-link {
+                width: 250px !important;
+                margin-left: 280px !important;
+                margin-bottom: 5px !important;
+         }
        
     </style>
   </head>
@@ -127,7 +138,9 @@
 
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(210,180,140);">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"></a>
+    <a class="navbar-brand " href="{{route('index')}}">
+    <img width="80px" src="{{asset('logo.jpeg')}}" alt="">
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
