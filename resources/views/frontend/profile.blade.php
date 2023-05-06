@@ -63,7 +63,7 @@
     <div class="row">
         <div class="col-12">
             <div class="image text-center mt-5 z-index-1">
-                <embed style="border: 4px solid white;width:120px;border-radius: 50%;" src="@if($user->profile_photo != null){{asset('profile')}}/{{$user->profile_photo}}@else {{asset('profile/default.jpg')}}  @endif" type="image/png">
+                <embed style="border: 4px solid white;width:120px;border-radius: 50%;" src="@if($user->profile_photo != null){{asset('profile')}}/{{$user->profile_photo}} @else {{asset('profile/default.jpg')}}  @endif" type="image/png">
             </div>
 
             <div class="box1 d-flex align-items-center justify-content-center" style="margin-top:-50px;">

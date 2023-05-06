@@ -25,7 +25,8 @@ class FrontendController extends Controller
     }
     
     public function profile_details($slug){
-        $user = User::where('id', $slug)->first();
+        //return $slug;
+        $user = User::where('profile_url', $slug)->first();
         return view('frontend.profile',[
             'user'=>$user,
         ]);

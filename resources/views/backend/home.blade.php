@@ -94,7 +94,7 @@
           </div>
       </div>
 
-      <div class="col-12 d-flex align-items-center justify-content-center mt-3 mb-5">
+      <div class="col-12 d-flex align-items-center justify-content-center mt-3">
           
           <div class="row">
               <div class="col-12">
@@ -121,6 +121,20 @@
               
           </div>
       </div>
+
+
+      <div class="col-12 d-flex align-items-center justify-content-center mt-3 mb-5">
+          
+          <div class="row">
+              <div class="col-12">
+                  <div class="box3">
+                     <a href="" data-bs-toggle="modal" data-bs-target="#Profileupdatemodals" class="btn btn-primary btn-sm px-3 fw-bold py-3" style="width:360px;background-color:#E2E2E2;border:0px;border-radius: 25px;color:rgb(26, 0, 0);">Update Your Profile Url<i class="float-end fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                  </div>
+              </div>
+              
+          </div>
+      </div>
+
 
     </div>
 </div>
@@ -309,7 +323,7 @@
   </div>
 </div>
 
-<!-- profile url modal -->
+<!-- password update modal -->
 <div class="modal fade" id="ProfileurlModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -329,6 +343,31 @@
 
       <label for="" class="form-label mb-2">Confirm Password</label>
       <input type="text" name="confirmpassword" class="form-control" placeholder="Enter Your Confirm Password">
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Save changes</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- profile url modal -->
+<div class="modal fade" id="Profileupdatemodals" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Change Profile Url</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <form action="{{route('profile_url_update')}}" method="post">
+          @csrf
+        <input type="hidden" value="{{Auth::id()}}" name="id">
+      <label for="" class="form-label mb-2">Profile Url</label>
+      <input type="text" name="profile_url" class="form-control" placeholder="Enter Your Profile Url Without Space">
+
       </div>
       <div class="modal-footer">
         <button type="submit" class="btn btn-primary">Save changes</button>

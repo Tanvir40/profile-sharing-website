@@ -171,9 +171,9 @@
 
             <div class="col-md-6">
                 <div class="box text-center text-white px-5 pb-3" style="padding-top:4rem;background-color:rgb(25,25,112);border-radius: 10px;">
-                <a href="{{route('profile_details',$userone->id)}}"><img class="z-index:1;" style="border: 4px solid white;width:120px;border-radius: 50%; margin-top: -200px;" src="@if($userone->profile_photo != null){{asset('profile')}}/{{$userone->profile_photo}}@else {{asset('profile/default.jpg')}}  @endif" alt=""></a>
+                <a href="{{route('profile_details',$userone->profile_url)}}"><img class="z-index:1;" style="border: 4px solid white;width:120px;border-radius: 50%; margin-top: -200px;" src="@if($userone->profile_photo != null){{asset('profile')}}/{{$userone->profile_photo}}@else {{asset('profile/default.jpg')}}  @endif" alt=""></a>
                     <div class="d-flex align-items-center justify-content-center">
-                        <a class="text-decoration-none" href="{{route('profile_details',$userone->id)}}"><h4 class="text-white">{{'@'}}{{$userone->name}} &nbsp;</h4></a>
+                        <a class="text-decoration-none" href="{{route('profile_details',$userone->profile_url)}}"><h4 class="text-white">{{'@'}}{{$userone->name}} &nbsp;</h4></a>
                     
                     </div>
                     <div class="d-flex">
@@ -230,8 +230,8 @@
                     <div class="col-md-6 col-sm-12 mb-5">
                         <div class="card mb-6" style="background-color: rgb(25,25,112);">
                             <div class="card-body">
-                            <a href="{{route('profile_details',$user->id)}}"><img class="z-index:1;" style="border: 4px solid white;width:70px;border-radius: 50%; margin-top: -70px;" src="@if($user->profile_photo != null){{asset('profile')}}/{{$user->profile_photo}}@else {{asset('profile/default.jpg')}}  @endif" alt=""></a>
-                            <a href="{{route('profile_details',$user->id)}}" class="text-decoration-none"><h6 class="text-white bold">{{'@'}}{{$user->name}}</h6></a>
+                            <a href="{{route('profile_details',$user->profile_url)}}"><img class="z-index:1;" style="border: 4px solid white;width:70px;border-radius: 50%; margin-top: -70px;" src="@if($user->profile_photo != null){{asset('profile')}}/{{$user->profile_photo}}@else {{asset('profile/default.jpg')}}  @endif" alt=""></a>
+                            <a href="{{route('profile_details',$user->profile_url)}}" class="text-decoration-none"><h6 class="text-white bold">{{'@'}}{{$user->name}}</h6></a>
                                 <p class="text-white fw-light" style="font-size:0.8rem;">{{substr($user->profile_desp, 0, 90)}}</p>
 
                                 <div class="row m-0 p-0">
