@@ -10,15 +10,13 @@ class FrontendController extends Controller
 {
     public function index(){
         $users = User::limit(4)->get();
-        $userone = User::
-        orderByDesc(User::raw('count_status'))
-        ->first();
+        $userone = User::orderBy('count_status' , 'DESC')->first();
         return view('frontend.welcome',[
             'users'=>$users,
             'userone'=>$userone,
         ]);
         
-        // return $userone;
+        // dd($userone);
     }
 
     public function profile(){
