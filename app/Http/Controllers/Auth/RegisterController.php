@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class RegisterController extends Controller
 {
@@ -66,8 +67,9 @@ class RegisterController extends Controller
     {
         
         return User::create([
-            'profile_url' => $data['name'],
+            'profile_url' => Str::slug($data['name']),
             'name' => $data['name'],
+            'profile_desp' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has',
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);

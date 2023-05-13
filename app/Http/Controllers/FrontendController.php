@@ -9,26 +9,56 @@ use Auth;
 class FrontendController extends Controller
 {
     public function index(){
-        $users = User::all();
-        $userone = User::first();
+        $users = User::limit(4)->get();
+        $userone = User::
+        orderByDesc(User::raw('count_status'))
+        ->first();
         return view('frontend.welcome',[
             'users'=>$users,
             'userone'=>$userone,
         ]);
+        
+        // return $userone;
     }
 
     public function profile(){
+        
+        $pageViews = Auth::user()->count_status ;
+        $pageViews++;
+        
+        
+        User::where('id', Auth::id())->update([
+            'count_status'=>$pageViews,
+        ]);
+        
         $user = User::where('id', Auth::id())->first();
         return view('frontend.profile',[
             'user'=>$user,
         ]);
+        
+        
     }
     
-    public function profile_details($slug){
-        //return $slug;
+    public function profile_details( Request $request , $slug){
+        
+        // return $request->count_status;
+        
+        // $pageViews = $slug->count_status ;
+        // $pageViews++;
+        
+        // $user = User::where('name',  $slug)->get();
+        
+        // return $user;
+        
+        // User::where('name',  $slug)->update([
+        //     'count_status'=>$pageViews,
+        // ]);
+        
         $user = User::where('profile_url', $slug)->first();
         return view('frontend.profile',[
             'user'=>$user,
         ]);
+        
+       
     }
 }

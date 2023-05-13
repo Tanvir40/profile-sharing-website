@@ -29,6 +29,10 @@ class BackendController extends Controller
     function name_update(Request $request){
 
         if($request->name && $request->profile_photo){
+            
+             $request->validate([
+                'profile_photo'=>'required | image | max:3072 | mimes:jpeg,png,jpg,gif',
+            ]);
            
             $uploaded_file = $request->profile_photo;
             $extension = $uploaded_file->getClientOriginalExtension();
@@ -48,6 +52,11 @@ class BackendController extends Controller
             return back();
         }
         else{
+            
+            $request->validate([
+                'profile_photo'=>'required | image | max:3072 | mimes:jpeg,png,jpg,gif',
+            ]);
+            
             $uploaded_file = $request->profile_photo;
             $extension = $uploaded_file->getClientOriginalExtension();
             $file_name = substr(md5(time()), 0, 10).'.'.$extension;
@@ -69,6 +78,14 @@ class BackendController extends Controller
 
     function photo_update(Request $request){
         if($request->photo_one && $request->photo_two){
+            
+            $request->validate([
+                'photo_one'=>'required | image | max:3072 | mimes:jpeg,png,jpg,gif',
+            ]);
+            
+            $request->validate([
+                'photo_two'=>'required | image | max:3072 | mimes:jpeg,png,jpg,gif',
+            ]);
            
             $uploaded_file = $request->photo_one;
             $extension = $uploaded_file->getClientOriginalExtension();
@@ -87,6 +104,10 @@ class BackendController extends Controller
             return back();
 
         }elseif($request->photo_one){
+            
+            $request->validate([
+                'photo_one'=>'required | image | max:3072 | mimes:jpeg,png,jpg,gif',
+            ]);
 
             $uploaded_file = $request->photo_one;
             $extension = $uploaded_file->getClientOriginalExtension();
@@ -99,6 +120,11 @@ class BackendController extends Controller
             return back();
         }
         else{
+            
+            $request->validate([
+                'photo_two'=>'required | image | max:3072 | mimes:jpeg,png,jpg,gif',
+            ]);
+            
             $uploaded_file = $request->photo_two;
             $extension = $uploaded_file->getClientOriginalExtension();
             $file_name = substr(md5(time()), 0, 10).'.'.$extension;
@@ -186,4 +212,6 @@ class BackendController extends Controller
         ]);
         return back();
     }
+    
+   
 }

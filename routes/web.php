@@ -23,9 +23,9 @@ use App\Http\Controllers\BackendController;
 Auth::routes();
 
 Route::get('/', [FrontendController::class, 'index'])->name('index');
-Route::get('/profiles', [FrontendController::class, 'profile'])->name('profile')->middleware('auth');
+Route::get('/profiles/{slug}', [FrontendController::class, 'profile'])->name('profile')->middleware('auth');
 
-Route::get('/profiles={slug}', [FrontendController::class, 'profile_details'])->name('profile_details');
+Route::get('/profiles/{slug}', [FrontendController::class, 'profile_details'])->name('profile_details');
 
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
@@ -38,3 +38,5 @@ Route::post('/video-update', [BackendController::class, 'video_update'])->name('
 Route::post('/profile-update', [BackendController::class, 'profile_update'])->name('profile_update');
 Route::post('/social-update', [BackendController::class, 'social_update'])->name('social_update');
 Route::post('/profile-url-update', [BackendController::class, 'profile_url_update'])->name('profile_url_update');
+
+Route::get('/count_status/{id}', [BackendController::class, 'count_status'])->name('count_status');

@@ -1,0 +1,4 @@
+[18-Mar-2023 16:03:44 UTC] PHP Warning:  Undefined array key "path" in /home/sabbira1/artfultribe.com/wp-includes/class-wp-customize-manager.php on line 1984
+[19-Mar-2023 03:12:19 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[20-Mar-2023 14:00:00 UTC] Cron reschedule event error for hook: wpforms_email_summaries_cron, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"wpforms_email_summaries_weekly","args":[],"interval":604800}
+[03-Apr-2023 03:34:39 UTC] Cron reschedule event error for hook: user_registration_usage_stats_scheduled_events, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"biweekly","args":[],"interval":1296000}
